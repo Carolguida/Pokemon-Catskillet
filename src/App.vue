@@ -1,23 +1,27 @@
 <template>
-
+  <div>
+    <NavBar></NavBar>
     <div class="container">
-      <header>Navbar</header>
-    <div class="container-body">
-      <main>
-        <router-view></router-view>
-      </main>
+    <main>
+      <router-view></router-view>
+    </main>
     </div>
   </div>
- </template>
-
+</template>
 
 <script>
-  
-export default{
-  name: 'App'  
-}
+import NavBar from "./components/NavBar";
+export default {
+  name: "App",
+
+  components: {
+    NavBar,
+  },
+};
 </script>
 
 <style>
-
+.container{
+  margin-top: 20px;
+}
 </style>

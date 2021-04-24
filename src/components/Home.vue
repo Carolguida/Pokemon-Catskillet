@@ -1,20 +1,31 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <b-form-input
-          v-model="text"
-          placeholder="Insira o Pokemon desejado"
-        ></b-form-input>
-        <div class="mt-2">Value: {{ text }}</div>
+      
+
+      <div>
+        <pokemon-table></pokemon-table>
       </div>
+      
+
     </div>
   </div>
 </template>
 
+
 <script>
+
+import PokemonTable from './PokemonTable.vue';
+
 export default {
+
   name: "Home",
+
+  components: {
+    PokemonTable
+    
+  },
+
   data() {
     return {
       text: "",
