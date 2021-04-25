@@ -9,9 +9,15 @@ export default new Router({
         {
             path: "/",            
             name: "Home",
-            component: () => import("@/components/Home.vue"),
+            component: () => import("@/components/Home.vue")
             
+        },
+
+        {
+            path: "/pokemondetails/:id",
+            name: "PokemonDetails",
+            component: () => import("@/components/PokemonDetails.vue")
         }
-               
+                      
     ]
 });

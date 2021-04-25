@@ -1,10 +1,12 @@
 <template>
   <div>
     <div>
-      <b-table :fields="fields" :items="items">
-        <template #cell(Pokemon_Name)="data">       
-          <router-link to="/">
-          {{ data.value }}
+      <b-table :fields="fields" :items="pokemonList">
+        <template #cell(name)="data">
+          <router-link
+            :to="{ name: 'PokemonDetails', params: { id: data.value } }"
+          >
+            {{ data.value }}
           </router-link>
         </template>
       </b-table>
@@ -13,30 +15,41 @@
 </template>
 
 <script>
+
+import  service  from '../services/service'
+
 export default {
   name: "PokemonTable",
   data() {
     return {
-      fields: [
-        {
-          key: "number",
-          label: "Number",
-        },
 
-        {
-          key: "Pokemon_Name",
-          label: "Name",
-        },
-      ],
+      fields: [{
+        key: 'name',
+        label: 'Nome'
+      }],
+      pokemonList: []
 
-      items: [
-        {
-          number: 40,
-          Pokemon_Name: "Dickerson",
-        },
-      ],
     };
   },
+
+mounted(){
+  this.getItems()
+},
+
+
+methods: {
+ 
+  getItems(){
+    service.get('pokemon').then(response => {
+      this.pokemonList = response.data.results
+      
+    })
+  }
+
+}
+
+
+
 };
 </script>
 
