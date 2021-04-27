@@ -1,37 +1,28 @@
 <template>
-  <div class="container">
-    <div class="row">
-      
-
-      <div>
-        <pokemon-table></pokemon-table>
-      </div>
-      
-
-    </div>
+  <div>
+    <pokemon-table></pokemon-table>
   </div>
 </template>
 
-
 <script>
-
-import PokemonTable from './PokemonTable.vue';
+import PokemonTable from "./PokemonTable.vue";
 
 export default {
-
   name: "Home",
 
   components: {
-    PokemonTable
-    
+    PokemonTable,
   },
 
   data() {
     return {
       text: "",
+      
     };
   },
 };
 </script>
 
-<style scoped></style>
+<style>
+
+</style>

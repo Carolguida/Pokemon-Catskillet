@@ -1,7 +1,9 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="light" variant="light">
-      <b-navbar-brand href="#" >Pokemon</b-navbar-brand>
+      <b-navbar-brand >
+        <img src="https://i.imgur.com/oEYWKWx.png"  alt="Kitten">
+        </b-navbar-brand>
     </b-navbar>
   </div>
 </template>
@@ -15,12 +17,13 @@ export default {
 <style scoped>
 
 .navbar.navbar-light{
-  background-color: blueviolet !important;
+  background-color: #343a40 !important;
   
 }
 
-.navbar-light .navbar-brand{
-  color: white !important;
+img{
+  width: 80px !important;
+  border-radius: 50% !important;
 }
 
 </style>
