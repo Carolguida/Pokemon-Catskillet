@@ -49,7 +49,7 @@
         </div>
 
          <div class="col-md-6 d-flex justify-content-center">
-          <img src="https://i.imgur.com/XJ3yKc1.png" class="img-fluid mb-5" />
+          <img src="https://i.imgur.com/YNnAwH1.png" class="img-fluid" />
         </div> 
       </div>
     </div> 
@@ -93,9 +93,6 @@ export default {
       service.get(`pokemon/${this.pokemonName}`).then((response) => {
         this.pokemonDetails = response.data;
         this.getPokemonGender(response.data.id);
-
-        //console.log(response.data)
-        //console.log(this.pokemonDetails.species.name)
       });
     },
 

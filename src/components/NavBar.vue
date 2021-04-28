@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="light" variant="light">
       <b-navbar-brand >
-        <img src="https://i.imgur.com/oEYWKWx.png"  alt="Kitten">
+        <img src="https://i.imgur.com/oEYWKWx.png"  alt="POKEMON">
         </b-navbar-brand>
     </b-navbar>
   </div>
@@ -23,7 +23,7 @@ export default {
 
 img{
   width: 80px !important;
-  border-radius: 50% !important;
+  
 }
 
 </style>

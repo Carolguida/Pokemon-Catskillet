@@ -129,10 +129,6 @@ table {
   border-radius: 10px;
 }
 
-.text-color {
-  color: darkslategrey;
-}
-
 .bg-column {
   background-color: aliceblue;
 }
